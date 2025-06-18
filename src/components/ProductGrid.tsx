@@ -1,5 +1,8 @@
 
 import ProductCard from "./ProductCard";
+import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useRef } from "react";
 
 const sampleProducts = [
   {
@@ -11,7 +14,8 @@ const sampleProducts = [
     rating: 4.6,
     reviews: 47829,
     image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=400&fit=crop",
-    category: "Apple"
+    category: "Apple",
+    assured: true
   },
   {
     id: "2", 
@@ -22,7 +26,8 @@ const sampleProducts = [
     rating: 4.4,
     reviews: 12453,
     image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=400&fit=crop",
-    category: "Samsung"
+    category: "Samsung",
+    assured: true
   },
   {
     id: "3",
@@ -44,7 +49,8 @@ const sampleProducts = [
     rating: 4.2,
     reviews: 3456,
     image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=400&fit=crop",
-    category: "ASUS"
+    category: "ASUS",
+    assured: true
   },
   {
     id: "5",
@@ -77,7 +83,8 @@ const sampleProducts = [
     rating: 4.3,
     reviews: 5634,
     image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=400&fit=crop",
-    category: "Sony"
+    category: "Sony",
+    assured: true
   },
   {
     id: "8",
@@ -92,51 +99,92 @@ const sampleProducts = [
   }
 ];
 
+const ProductSection = ({ title, products, viewAllAction }: { title: string, products: typeof sampleProducts, viewAllAction?: () => void }) => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scrollLeft = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <section className="bg-white rounded-lg shadow-sm mb-4">
+      <div className="p-6 border-b">
+        <div className="flex items-center justify-between">
+          <h2 className="text-xl font-bold text-gray-900">{title}</h2>
+          <Button 
+            onClick={viewAllAction}
+            className="bg-flipkart-blue text-white px-6 py-2 rounded text-sm hover:bg-blue-700"
+          >
+            VIEW ALL
+          </Button>
+        </div>
+      </div>
+      
+      <div className="relative">
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={scrollLeft}
+          className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white shadow-md rounded-full hover:bg-gray-50"
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </Button>
+        
+        <div 
+          ref={scrollRef}
+          className="flex overflow-x-auto scrollbar-hide space-x-4 p-6 scroll-smooth"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          {products.map((product) => (
+            <div key={product.id} className="flex-shrink-0 w-64">
+              <ProductCard {...product} />
+            </div>
+          ))}
+        </div>
+        
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={scrollRight}
+          className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white shadow-md rounded-full hover:bg-gray-50"
+        >
+          <ChevronRight className="h-5 w-5" />
+        </Button>
+      </div>
+    </section>
+  );
+};
+
 const ProductGrid = () => {
   return (
     <div className="bg-gray-100 py-6">
       <div className="container mx-auto px-4">
-        {/* Section Headers */}
-        <div className="space-y-8">
-          {/* Best of Electronics */}
-          <section className="bg-white rounded-lg shadow-sm">
-            <div className="p-6 border-b">
-              <div className="flex items-center justify-between">
-                <h2 className="text-xl font-bold text-gray-900">Best of Electronics</h2>
-                <button className="bg-flipkart-blue text-white px-6 py-2 rounded text-sm hover:bg-blue-700">
-                  VIEW ALL
-                </button>
-              </div>
-            </div>
-            
-            <div className="p-6">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                {sampleProducts.slice(0, 6).map((product) => (
-                  <ProductCard key={product.id} {...product} />
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Beauty, Food, Toys & more */}
-          <section className="bg-white rounded-lg shadow-sm">
-            <div className="p-6 border-b">
-              <div className="flex items-center justify-between">
-                <h2 className="text-xl font-bold text-gray-900">Beauty, Food, Toys & more</h2>
-                <button className="bg-flipkart-blue text-white px-6 py-2 rounded text-sm hover:bg-blue-700">
-                  VIEW ALL
-                </button>
-              </div>
-            </div>
-            
-            <div className="p-6">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                {sampleProducts.slice(2, 8).map((product) => (
-                  <ProductCard key={product.id} {...product} />
-                ))}
-              </div>
-            </div>
-          </section>
+        <div className="space-y-6">
+          <ProductSection 
+            title="Best of Electronics" 
+            products={sampleProducts.slice(0, 6)}
+            viewAllAction={() => console.log('View all electronics')}
+          />
+          
+          <ProductSection 
+            title="Beauty, Food, Toys & more" 
+            products={sampleProducts.slice(2, 8)}
+            viewAllAction={() => console.log('View all beauty products')}
+          />
+          
+          <ProductSection 
+            title="Sports, Healthcare & more" 
+            products={sampleProducts.slice(1, 7)}
+            viewAllAction={() => console.log('View all sports products')}
+          />
         </div>
       </div>
     </div>
