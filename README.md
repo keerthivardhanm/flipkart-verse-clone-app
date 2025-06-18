@@ -1,16 +1,4 @@
-# Welcome to your Lovable project
-
-## Project info
-
-**URL**: https://lovable.dev/projects/20aa034c-97d6-4cf1-8132-1a5e6e34b929
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/20aa034c-97d6-4cf1-8132-1a5e6e34b929) and start prompting.
+Simply visit the live website https://flipkart-verse-clone-app.lovable.app
 
 Changes made via Lovable will be committed automatically to this repo.
 
@@ -59,13 +47,6 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/20aa034c-97d6-4cf1-8132-1a5e6e34b929) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
 Yes, you can!
 
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
