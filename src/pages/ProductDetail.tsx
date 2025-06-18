@@ -20,9 +20,9 @@ const ProductDetail = () => {
     rating: 4.5,
     reviews: 1234,
     images: [
-      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=600&fit=crop"
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&h=600&fit=crop", // MacBook main image
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&h=600&fit=crop", // MacBook side view
+      "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=600&h=600&fit=crop" // MacBook angle view
     ],
     category: "Laptops",
     description: "The MacBook Air M2 is incredibly thin and light with a stunning Retina display, superfast M2 chip, and all-day battery life.",

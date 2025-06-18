@@ -24,7 +24,7 @@ const Cart = () => {
       name: "MacBook Air M2 13-inch Laptop",
       price: 99990,
       quantity: 1,
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=200&h=200&fit=crop",
+      image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=200&h=200&fit=crop", // MacBook image
       category: "Laptops"
     },
     {
@@ -32,7 +32,7 @@ const Cart = () => {
       name: "iPhone 15 Pro Max 256GB",
       price: 159900,
       quantity: 1,
-      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=200&h=200&fit=crop",
+      image: "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=200&h=200&fit=crop", // iPhone image
       category: "Mobiles"
     }
   ]);

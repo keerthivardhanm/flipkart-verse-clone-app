@@ -10,21 +10,21 @@ const HeroSection = () => {
   const banners = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=1200&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&h=400&fit=crop", // Electronics banner
       alt: "Electronics Sale",
       title: "Electronics Sale",
       subtitle: "Up to 80% off"
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=1200&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=400&fit=crop", // Fashion banner
       alt: "Fashion Sale",
       title: "Fashion Sale",
       subtitle: "Min 50% off"
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&h=400&fit=crop", // Home appliances banner
       alt: "Home Appliances",
       title: "Home Appliances",
       subtitle: "Starting ₹1,999"
@@ -93,14 +93,14 @@ const HeroSection = () => {
         {/* Category Cards */}
         <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-10 gap-4">
           {[
-            { name: "Top Offers", image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=200&h=200&fit=crop", offer: "Up to 80% Off" },
-            { name: "Mobiles", image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=200&h=200&fit=crop", offer: "From ₹7,999" },
-            { name: "Fashion", image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=200&h=200&fit=crop", offer: "Min 40% Off" },
-            { name: "Electronics", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=200&h=200&fit=crop", offer: "From ₹199" },
+            { name: "Top Offers", image: "https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?w=200&h=200&fit=crop", offer: "Up to 80% Off" },
+            { name: "Mobiles", image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=200&h=200&fit=crop", offer: "From ₹7,999" },
+            { name: "Fashion", image: "https://images.unsplash.com/photo-1445205170230-053b83016050?w=200&h=200&fit=crop", offer: "Min 40% Off" },
+            { name: "Electronics", image: "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=200&h=200&fit=crop", offer: "From ₹199" },
             { name: "Home", image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=200&h=200&fit=crop", offer: "From ₹99" },
-            { name: "Appliances", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=200&h=200&fit=crop", offer: "From ₹1,999" },
+            { name: "Appliances", image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=200&h=200&fit=crop", offer: "From ₹1,999" },
             { name: "Travel", image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=200&h=200&fit=crop", offer: "Up to 50% Off" },
-            { name: "Beauty", image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=200&h=200&fit=crop", offer: "From ₹99" },
+            { name: "Beauty", image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=200&h=200&fit=crop", offer: "From ₹99" },
             { name: "Sports", image: "https://images.unsplash.com/photo-1571019613540-996a9d8e5fb1?w=200&h=200&fit=crop", offer: "From ₹149" },
             { name: "Toys", image: "https://images.unsplash.com/photo-1558060370-d644479cb6f7?w=200&h=200&fit=crop", offer: "From ₹79" }
           ].map((category) => (

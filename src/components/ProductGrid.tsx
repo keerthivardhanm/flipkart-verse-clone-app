@@ -13,7 +13,7 @@ const sampleProducts = [
     discount: 11,
     rating: 4.6,
     reviews: 47829,
-    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=400&h=400&fit=crop", // iPhone image
     category: "Apple",
     assured: true
   },
@@ -25,7 +25,7 @@ const sampleProducts = [
     discount: 13,
     rating: 4.4,
     reviews: 12453,
-    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=400&fit=crop", // Samsung phone image
     category: "Samsung",
     assured: true
   },
@@ -37,7 +37,7 @@ const sampleProducts = [
     discount: 14,
     rating: 4.3,
     reviews: 8921,
-    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?w=400&h=400&fit=crop", // OnePlus phone image
     category: "OnePlus"
   },
   {
@@ -48,7 +48,7 @@ const sampleProducts = [
     discount: 30,
     rating: 4.2,
     reviews: 3456,
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=400&fit=crop", // ASUS laptop image
     category: "ASUS",
     assured: true
   },
@@ -60,7 +60,7 @@ const sampleProducts = [
     discount: 28,
     rating: 4.1,
     reviews: 2876,
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=400&h=400&fit=crop", // HP laptop image
     category: "HP"
   },
   {
@@ -71,7 +71,7 @@ const sampleProducts = [
     discount: 57,
     rating: 4.0,
     reviews: 156789,
-    image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=400&h=400&fit=crop", // Wireless earbuds image
     category: "boAt"
   },
   {
@@ -82,7 +82,7 @@ const sampleProducts = [
     discount: 40,
     rating: 4.3,
     reviews: 5634,
-    image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400&h=400&fit=crop", // Sony headphones image
     category: "Sony",
     assured: true
   },
@@ -94,7 +94,7 @@ const sampleProducts = [
     discount: 40,
     rating: 4.2,
     reviews: 12387,
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=400&h=400&fit=crop", // Samsung TV image
     category: "Samsung"
   }
 ];
